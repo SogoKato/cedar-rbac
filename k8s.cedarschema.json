@@ -1,0 +1,51 @@
+{
+    "Kubernetes": {
+        "entityTypes": {
+            "User": {
+                "shape": {
+                    "type": "Record",
+                    "attributes": {}
+                },
+                "memberOfTypes": [
+                    "Role"
+                ]
+            },
+            "Role": {
+                "shape": {
+                    "type": "Record",
+                    "attributes": {}
+                },
+                "memberOfTypes": []
+            },
+            "Pod": {
+                "shape": {
+                    "type": "Record",
+                    "attributes": {}
+                },
+                "memberOfTypes": []
+            }
+        },
+        "actions": {
+            "describe": {
+                "appliesTo": {
+                    "principalTypes": [
+                        "User"
+                    ],
+                    "resourceTypes": [
+                        "Pod"
+                    ]
+                }
+            },
+            "delete": {
+                "appliesTo": {
+                    "principalTypes": [
+                        "User"
+                    ],
+                    "resourceTypes": [
+                        "Pod"
+                    ]
+                }
+            }
+        }
+    }
+}
